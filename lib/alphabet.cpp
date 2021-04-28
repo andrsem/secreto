@@ -40,9 +40,6 @@ public:
     };
 };
 
-Letter A = Letter(0, 1, 0, 0, 0, 0, 0, 1);
-Letter B = Letter(0, 1, 0, 0, 0, 0, 1, 0);
-
 void getLetter(Letter letter)
 {
 
@@ -55,3 +52,26 @@ void getLetter(Letter letter)
     digitalWrite(pin7, letter.pin7);
     digitalWrite(pin8, letter.pin8);
 }
+
+Letter A = Letter(0, 1, 0, 0, 0, 0, 0, 1);
+Letter B = Letter(0, 1, 0, 0, 0, 0, 1, 0);
+Letter C = Letter(0, 1, 0, 0, 0, 0, 1, 1);
+Letter D = Letter(0, 1, 0, 0, 0, 1, 0, 0);
+Letter E = Letter(0, 1, 0, 0, 0, 1, 0, 1);
+Letter F = Letter(0, 1, 0, 0, 0, 1, 1, 0);
+Letter G = Letter(0, 1, 0, 0, 0, 1, 1, 1);
+Letter H = Letter(0, 1, 0, 0, 1, 0, 0, 0);
+Letter I = Letter(0, 1, 0, 0, 1, 0, 0, 1);
+Letter J = Letter(0, 1, 0, 0, 1, 0, 1, 0);
+Letter K = Letter(0, 1, 0, 0, 1, 0, 1, 1);
+Letter L = Letter(0, 1, 0, 0, 1, 1, 0, 0);
+Letter M = Letter(0, 1, 0, 0, 1, 1, 0, 1);
+Letter N = Letter(0, 1, 0, 0, 1, 1, 1, 0);
+Letter O = Letter(0, 1, 0, 0, 1, 1, 1, 1);
+Letter P = Letter(0, 1, 0, 1, 0, 0, 0, 0);
+Letter Q = Letter(0, 1, 0, 1, 0, 0, 0, 1);
+Letter R = Letter(0, 1, 0, 1, 0, 0, 1, 0);
+Letter S = Letter(0, 1, 0, 1, 0, 0, 1, 1);
+Letter T = Letter(0, 1, 0, 1, 0, 1, 0, 0);
+Letter U = Letter(0, 1, 0, 1, 0, 1, 0, 1);
+Letter V = Letter(0, 1, 0, 1, 0, 1, 1, 0);
