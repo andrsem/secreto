@@ -10,6 +10,7 @@ const int pin7 = 6;
 const int pin8 = 5;
 const int pinKeyLeft = 3;
 const int pinKeyRight = 2;
+boolean mode = true;
 
 void setup()
 {
@@ -27,4 +28,17 @@ void setup()
 
 void loop()
 {
+  if (digitalRead(pinKeyLeft) == LOW)
+  {
+    delay(300);
+    mode = !mode;
+  }
+  digitalWrite(pin1, mode);
+  digitalWrite(pin2, mode);
+  digitalWrite(pin3, mode);
+  digitalWrite(pin4, mode);
+  digitalWrite(pin5, mode);
+  digitalWrite(pin6, mode);
+  digitalWrite(pin7, mode);
+  digitalWrite(pin8, mode);
 }
