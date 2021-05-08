@@ -106,3 +106,14 @@ Letter w = Letter(0, 1, 1, 1, 0, 1, 1, 1);
 Letter x = Letter(0, 1, 1, 1, 1, 0, 0, 0);
 Letter y = Letter(0, 1, 1, 1, 1, 0, 0, 1);
 Letter z = Letter(0, 1, 1, 1, 1, 0, 1, 0);
+
+Letter zero = Letter(0, 0, 0, 0, 0, 0, 0, 0);
+Letter one = Letter(0, 0, 0, 0, 0, 0, 0, 1);
+Letter two = Letter(0, 0, 0, 0, 0, 0, 1, 0);
+Letter three = Letter(0, 0, 0, 0, 0, 0, 1, 1);
+Letter four = Letter(0, 0, 0, 0, 0, 1, 0, 0);
+Letter five = Letter(0, 0, 0, 0, 0, 1, 0, 1);
+Letter six = Letter(0, 0, 0, 0, 0, 1, 1, 0);
+Letter seven = Letter(0, 0, 0, 0, 0, 1, 1, 1);
+Letter eight = Letter(0, 0, 0, 0, 1, 0, 0, 0);
+Letter nine = Letter(0, 0, 0, 0, 1, 0, 0, 1);
