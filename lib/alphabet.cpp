@@ -42,7 +42,6 @@ public:
 
 void getLetter(Letter letter)
 {
-
     digitalWrite(pin1, letter.pin1);
     digitalWrite(pin2, letter.pin2);
     digitalWrite(pin3, letter.pin3);
@@ -117,3 +116,5 @@ Letter six = Letter(0, 0, 0, 0, 0, 1, 1, 0);
 Letter seven = Letter(0, 0, 0, 0, 0, 1, 1, 1);
 Letter eight = Letter(0, 0, 0, 0, 1, 0, 0, 0);
 Letter nine = Letter(0, 0, 0, 0, 1, 0, 0, 1);
+
+Letter end = Letter(1, 1, 1, 1, 1, 1, 1, 1);
