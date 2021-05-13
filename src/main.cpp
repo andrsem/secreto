@@ -28,6 +28,8 @@ void getNextSymbol(PASSWORD pass)
   }
   else
   {
+    currentPosition = passLength;
+    forwards = false;
     getSymbol(end);
   }
 }
@@ -46,6 +48,8 @@ void getPreviousSymbol(PASSWORD pass)
   }
   else
   {
+    forwards = true;
+    currentPosition = 0;
     getSymbol(end);
   }
 }
