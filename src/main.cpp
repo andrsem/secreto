@@ -4,48 +4,51 @@
 const int pinKeyLeft = 3;
 const int pinKeyRight = 2;
 const int passLength = 7;
-boolean mode = true;
 int currentPosition = 0;
+boolean mode = true;
+boolean forwards = true;
 
 typedef union
 {
-  Letter a[passLength];
-  struct
-  {
-    Letter letter1;
-    Letter letter2;
-    Letter letter3;
-  } s;
+  Symbol p[passLength];
 } PASSWORD;
+const PASSWORD password = {zero, one, two, three, four, five, six};
 
-PASSWORD pass = {A, G, one, two, three, B, C};
-
-void getNextLetter(PASSWORD p)
+void getNextSymbol(PASSWORD pass)
 {
   if (currentPosition < passLength)
   {
-    getLetter(p.a[currentPosition]);
+    if (!forwards)
+    {
+      currentPosition++;
+    }
+    getSymbol(pass.p[currentPosition]);
     currentPosition++;
+    forwards = true;
   }
   else
   {
-    getLetter(end);
+    getSymbol(end);
   }
 }
 
-void getPreviousLetter(PASSWORD p)
+void getPreviousSymbol(PASSWORD pass)
 {
   if (currentPosition > 0)
   {
-    getLetter(p.a[currentPosition]);
+    if (forwards)
+    {
+      currentPosition--;
+    }
     currentPosition--;
+    getSymbol(pass.p[currentPosition]);
+    forwards = false;
   }
   else
   {
-    getLetter(end);
+    getSymbol(end);
   }
 }
-
 void setup()
 {
   pinMode(pin1, OUTPUT);
@@ -65,11 +68,11 @@ void loop()
   if (digitalRead(pinKeyLeft) == LOW)
   {
     delay(300);
-    getNextLetter(pass);
+    getPreviousSymbol(password);
   }
   if (digitalRead(pinKeyRight) == LOW)
   {
     delay(300);
-    getPreviousLetter(pass);
+    getNextSymbol(password);
   }
 }

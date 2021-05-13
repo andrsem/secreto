@@ -9,7 +9,7 @@ const int pin6 = 7;
 const int pin7 = 6;
 const int pin8 = 5;
 
-class Letter
+class Symbol
 {
 public:
     bool pin1;
@@ -20,7 +20,7 @@ public:
     bool pin6;
     bool pin7;
     bool pin8;
-    Letter(bool onOff1,
+    Symbol(bool onOff1,
            bool onOff2,
            bool onOff3,
            bool onOff4,
@@ -40,81 +40,83 @@ public:
     };
 };
 
-void getLetter(Letter letter)
+void getSymbol(Symbol s)
 {
-    digitalWrite(pin1, letter.pin1);
-    digitalWrite(pin2, letter.pin2);
-    digitalWrite(pin3, letter.pin3);
-    digitalWrite(pin4, letter.pin4);
-    digitalWrite(pin5, letter.pin5);
-    digitalWrite(pin6, letter.pin6);
-    digitalWrite(pin7, letter.pin7);
-    digitalWrite(pin8, letter.pin8);
+    digitalWrite(pin1, s.pin1);
+    digitalWrite(pin2, s.pin2);
+    digitalWrite(pin3, s.pin3);
+    digitalWrite(pin4, s.pin4);
+    digitalWrite(pin5, s.pin5);
+    digitalWrite(pin6, s.pin6);
+    digitalWrite(pin7, s.pin7);
+    digitalWrite(pin8, s.pin8);
 }
 
-Letter A = Letter(0, 1, 0, 0, 0, 0, 0, 1);
-Letter B = Letter(0, 1, 0, 0, 0, 0, 1, 0);
-Letter C = Letter(0, 1, 0, 0, 0, 0, 1, 1);
-Letter D = Letter(0, 1, 0, 0, 0, 1, 0, 0);
-Letter E = Letter(0, 1, 0, 0, 0, 1, 0, 1);
-Letter F = Letter(0, 1, 0, 0, 0, 1, 1, 0);
-Letter G = Letter(0, 1, 0, 0, 0, 1, 1, 1);
-Letter H = Letter(0, 1, 0, 0, 1, 0, 0, 0);
-Letter I = Letter(0, 1, 0, 0, 1, 0, 0, 1);
-Letter J = Letter(0, 1, 0, 0, 1, 0, 1, 0);
-Letter K = Letter(0, 1, 0, 0, 1, 0, 1, 1);
-Letter L = Letter(0, 1, 0, 0, 1, 1, 0, 0);
-Letter M = Letter(0, 1, 0, 0, 1, 1, 0, 1);
-Letter N = Letter(0, 1, 0, 0, 1, 1, 1, 0);
-Letter O = Letter(0, 1, 0, 0, 1, 1, 1, 1);
-Letter P = Letter(0, 1, 0, 1, 0, 0, 0, 0);
-Letter Q = Letter(0, 1, 0, 1, 0, 0, 0, 1);
-Letter R = Letter(0, 1, 0, 1, 0, 0, 1, 0);
-Letter S = Letter(0, 1, 0, 1, 0, 0, 1, 1);
-Letter T = Letter(0, 1, 0, 1, 0, 1, 0, 0);
-Letter U = Letter(0, 1, 0, 1, 0, 1, 0, 1);
-Letter V = Letter(0, 1, 0, 1, 0, 1, 1, 0);
-Letter W = Letter(0, 1, 0, 1, 0, 1, 1, 1);
-Letter X = Letter(0, 1, 0, 1, 1, 0, 0, 0);
-Letter Y = Letter(0, 1, 0, 1, 1, 0, 0, 1);
-Letter Z = Letter(0, 1, 0, 1, 1, 0, 1, 0);
+Symbol A = Symbol(0, 1, 0, 0, 0, 0, 0, 1);
+Symbol B = Symbol(0, 1, 0, 0, 0, 0, 1, 0);
+Symbol C = Symbol(0, 1, 0, 0, 0, 0, 1, 1);
+Symbol D = Symbol(0, 1, 0, 0, 0, 1, 0, 0);
+Symbol E = Symbol(0, 1, 0, 0, 0, 1, 0, 1);
+Symbol F = Symbol(0, 1, 0, 0, 0, 1, 1, 0);
+Symbol G = Symbol(0, 1, 0, 0, 0, 1, 1, 1);
+Symbol H = Symbol(0, 1, 0, 0, 1, 0, 0, 0);
+Symbol I = Symbol(0, 1, 0, 0, 1, 0, 0, 1);
+Symbol J = Symbol(0, 1, 0, 0, 1, 0, 1, 0);
+Symbol K = Symbol(0, 1, 0, 0, 1, 0, 1, 1);
+Symbol L = Symbol(0, 1, 0, 0, 1, 1, 0, 0);
+Symbol M = Symbol(0, 1, 0, 0, 1, 1, 0, 1);
+Symbol N = Symbol(0, 1, 0, 0, 1, 1, 1, 0);
+Symbol O = Symbol(0, 1, 0, 0, 1, 1, 1, 1);
+Symbol P = Symbol(0, 1, 0, 1, 0, 0, 0, 0);
+Symbol Q = Symbol(0, 1, 0, 1, 0, 0, 0, 1);
+Symbol R = Symbol(0, 1, 0, 1, 0, 0, 1, 0);
+Symbol S = Symbol(0, 1, 0, 1, 0, 0, 1, 1);
+Symbol T = Symbol(0, 1, 0, 1, 0, 1, 0, 0);
+Symbol U = Symbol(0, 1, 0, 1, 0, 1, 0, 1);
+Symbol V = Symbol(0, 1, 0, 1, 0, 1, 1, 0);
+Symbol W = Symbol(0, 1, 0, 1, 0, 1, 1, 1);
+Symbol X = Symbol(0, 1, 0, 1, 1, 0, 0, 0);
+Symbol Y = Symbol(0, 1, 0, 1, 1, 0, 0, 1);
+Symbol Z = Symbol(0, 1, 0, 1, 1, 0, 1, 0);
 
-Letter a = Letter(0, 1, 1, 0, 0, 0, 0, 1);
-Letter b = Letter(0, 1, 1, 0, 0, 0, 1, 0);
-Letter c = Letter(0, 1, 1, 0, 0, 0, 1, 1);
-Letter d = Letter(0, 1, 1, 0, 0, 1, 0, 0);
-Letter e = Letter(0, 1, 1, 0, 0, 1, 0, 1);
-Letter f = Letter(0, 1, 1, 0, 0, 1, 1, 0);
-Letter g = Letter(0, 1, 1, 0, 0, 1, 1, 1);
-Letter h = Letter(0, 1, 1, 0, 1, 0, 0, 0);
-Letter i = Letter(0, 1, 1, 0, 1, 0, 0, 1);
-Letter j = Letter(0, 1, 1, 0, 1, 0, 1, 0);
-Letter k = Letter(0, 1, 1, 0, 1, 0, 1, 1);
-Letter l = Letter(0, 1, 1, 0, 1, 1, 0, 0);
-Letter m = Letter(0, 1, 1, 0, 1, 1, 0, 1);
-Letter n = Letter(0, 1, 1, 0, 1, 1, 1, 0);
-Letter o = Letter(0, 1, 1, 0, 1, 1, 1, 1);
-Letter p = Letter(0, 1, 1, 1, 0, 0, 0, 0);
-Letter q = Letter(0, 1, 1, 1, 0, 0, 0, 1);
-Letter r = Letter(0, 1, 1, 1, 0, 0, 1, 0);
-Letter s = Letter(0, 1, 1, 1, 0, 0, 1, 1);
-Letter t = Letter(0, 1, 1, 1, 0, 1, 0, 0);
-Letter u = Letter(0, 1, 1, 1, 0, 1, 0, 1);
-Letter v = Letter(0, 1, 1, 1, 0, 1, 1, 0);
-Letter w = Letter(0, 1, 1, 1, 0, 1, 1, 1);
-Letter x = Letter(0, 1, 1, 1, 1, 0, 0, 0);
-Letter y = Letter(0, 1, 1, 1, 1, 0, 0, 1);
-Letter z = Letter(0, 1, 1, 1, 1, 0, 1, 0);
+Symbol a = Symbol(0, 1, 1, 0, 0, 0, 0, 1);
+Symbol b = Symbol(0, 1, 1, 0, 0, 0, 1, 0);
+Symbol c = Symbol(0, 1, 1, 0, 0, 0, 1, 1);
+Symbol d = Symbol(0, 1, 1, 0, 0, 1, 0, 0);
+Symbol e = Symbol(0, 1, 1, 0, 0, 1, 0, 1);
+Symbol f = Symbol(0, 1, 1, 0, 0, 1, 1, 0);
+Symbol g = Symbol(0, 1, 1, 0, 0, 1, 1, 1);
+Symbol h = Symbol(0, 1, 1, 0, 1, 0, 0, 0);
+Symbol i = Symbol(0, 1, 1, 0, 1, 0, 0, 1);
+Symbol j = Symbol(0, 1, 1, 0, 1, 0, 1, 0);
+Symbol k = Symbol(0, 1, 1, 0, 1, 0, 1, 1);
+Symbol l = Symbol(0, 1, 1, 0, 1, 1, 0, 0);
+Symbol m = Symbol(0, 1, 1, 0, 1, 1, 0, 1);
+Symbol n = Symbol(0, 1, 1, 0, 1, 1, 1, 0);
+Symbol o = Symbol(0, 1, 1, 0, 1, 1, 1, 1);
+Symbol p = Symbol(0, 1, 1, 1, 0, 0, 0, 0);
+Symbol q = Symbol(0, 1, 1, 1, 0, 0, 0, 1);
+Symbol r = Symbol(0, 1, 1, 1, 0, 0, 1, 0);
+Symbol s = Symbol(0, 1, 1, 1, 0, 0, 1, 1);
+Symbol t = Symbol(0, 1, 1, 1, 0, 1, 0, 0);
+Symbol u = Symbol(0, 1, 1, 1, 0, 1, 0, 1);
+Symbol v = Symbol(0, 1, 1, 1, 0, 1, 1, 0);
+Symbol w = Symbol(0, 1, 1, 1, 0, 1, 1, 1);
+Symbol x = Symbol(0, 1, 1, 1, 1, 0, 0, 0);
+Symbol y = Symbol(0, 1, 1, 1, 1, 0, 0, 1);
+Symbol z = Symbol(0, 1, 1, 1, 1, 0, 1, 0);
 
-Letter zero = Letter(0, 0, 0, 0, 0, 0, 0, 0);
-Letter one = Letter(0, 0, 0, 0, 0, 0, 0, 1);
-Letter two = Letter(0, 0, 0, 0, 0, 0, 1, 0);
-Letter three = Letter(0, 0, 0, 0, 0, 0, 1, 1);
-Letter four = Letter(0, 0, 0, 0, 0, 1, 0, 0);
-Letter five = Letter(0, 0, 0, 0, 0, 1, 0, 1);
-Letter six = Letter(0, 0, 0, 0, 0, 1, 1, 0);
-Letter seven = Letter(0, 0, 0, 0, 0, 1, 1, 1);
-Letter eight = Letter(0, 0, 0, 0, 1, 0, 0, 0);
-Letter nine = Letter(0, 0, 0, 0, 1, 0, 0, 1);
+Symbol zero = Symbol(0, 0, 0, 0, 0, 0, 0, 0);
+Symbol one = Symbol(0, 0, 0, 0, 0, 0, 0, 1);
+Symbol two = Symbol(0, 0, 0, 0, 0, 0, 1, 0);
+Symbol three = Symbol(0, 0, 0, 0, 0, 0, 1, 1);
+Symbol four = Symbol(0, 0, 0, 0, 0, 1, 0, 0);
+Symbol five = Symbol(0, 0, 0, 0, 0, 1, 0, 1);
+Symbol six = Symbol(0, 0, 0, 0, 0, 1, 1, 0);
+Symbol seven = Symbol(0, 0, 0, 0, 0, 1, 1, 1);
+Symbol eight = Symbol(0, 0, 0, 0, 1, 0, 0, 0);
+Symbol nine = Symbol(0, 0, 0, 0, 1, 0, 0, 1);
 
-Letter end = Letter(1, 1, 1, 1, 1, 1, 1, 1);
+Symbol end = Symbol(1, 1, 1, 1, 1, 1, 1, 1);
+Symbol goBackwards = Symbol(1, 1, 1, 1, 0, 0, 0, 0);
+Symbol goForwards = Symbol(0, 0, 0, 0, 1, 1, 1, 1);
